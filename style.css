@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400&family=Yellowtail&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f7f7f7;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container .box{
+    position: relative;
+    width: 400px;
+    height: 100px;
+    background: #fff;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.025);
+}
+
+.container .box:nth-child(1){
+    transform: translate(-70px);
+}
+
+.container .box:nth-child(3){
+    transform: translate(70px);
+}
+
+.container:hover .box:nth-child(1){
+    transform: translate(0);
+}
+
+.container:hover .box:nth-child(3){
+    transform: translate(0);
+}
+
+.container .box::before{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: var(--clr);
+    transition: 0.5s ease-in-out;
+}
